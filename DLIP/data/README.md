@@ -5,5 +5,5 @@ This module contains the Dataset (and Datamodule) definitions. The example modul
 .
 ├── base_classes # Base classes, which should be extended to define new datasets.
 │   └── segmentation # Base classes, specifically for segmentation datasets.
-├── example #  An example dataset, to obtain an overview how new datasets should be defined.
+├── isic_dermo #  The ISIC 2017 Melanoma dataset.
 ```

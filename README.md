@@ -1,4 +1,4 @@
-# Deep Learning Image Processing Template (DLIP)
+# Annotation Efforts in Image Segmentation can be Reduced by Neural Network Bootstrapping
 This repository is the implementation of the BMT2022 Contribution [Annotation Efforts in Image Segmentation can be Reduced by Neural Network Bootstrapping](XXXX URL TO FOLLOW).
 
 ## Project Structure

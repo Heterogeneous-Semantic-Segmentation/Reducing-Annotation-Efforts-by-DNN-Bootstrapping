@@ -4,6 +4,4 @@ This module contains the experiment definitions. With [yaml](https://en.wikipedi
 ```
 .
 ├── configurations #  The experiment yaml files.
-│   └── example #  An exemplary experiment.
-└── hpc_jobs # The definitions of HPC-Jobs.
 ```
