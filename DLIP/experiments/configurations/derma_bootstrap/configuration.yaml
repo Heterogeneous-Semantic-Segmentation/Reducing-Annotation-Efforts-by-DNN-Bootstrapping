@@ -1,0 +1,89 @@
+#  This file describes configuration details for executing the Unet architecture on the example dataset.
+
+
+# Name of this specific experiment
+experiment.name:
+  value: bootstrap-unet-derma
+# Seed of this experiment to ensure reproducibility.
+experiment.seed:
+  value: 1337
+
+# Model Configuration
+model.name:
+  value: UnetSupervised
+model.params.input_channels:
+  value: 3
+model.params.n_classes:
+  value: 1
+model.loss_fcn:
+  value: DiceLoss
+
+# Optimizer
+model.optimizer.type:
+  value: Adam
+model.optimizer.params.lr:
+  value: 0.001
+model.optimizer.params.params:
+  value: UnetSupervised
+
+# Trainer Configuration
+train.trainer.max_epochs:
+  value: 50
+train.trainer.num_sanity_val_steps:
+  value: 0
+train.trainer.gpus:
+  value: 1
+train.trainer.reload_dataloaders_every_epoch:
+  value: false
+
+# Data Configuration
+data.datamodule.name:
+  value: IsicDermoDataModule
+data.datamodule.arguments.root_dir:
+    value: /home/ws/kg2371/datasets/2017_ISIC_Derma
+data.datamodule.device:
+  value: 
+    local
+data.datamodule.arguments.dataset_size:
+  value: 1.0
+data.datamodule.arguments.initial_labeled_ratio:
+  value: 1.0
+data.datamodule.arguments.val_to_train_ratio:
+  value: 0.2
+data.datamodule.arguments.batch_size:
+  value: 25
+data.datamodule.arguments.labels_dir:
+  value: 'labels_otsu'
+
+
+# Callbacks Configuration
+train.callbacks.save_k_top_models:
+  value: 1
+
+#  Augmentations
+data.img_processing.img_size:
+  value: [256, 256]
+data.img_processing.img_type:
+  value: rgb_8_bit
+data.img_processing.aug1.replay_processing_pipeline:
+  value: False
+data.img_processing.aug1.aug_flip_prob:
+  value: 0.5
+data.img_processing.aug1.aug_gaussian_blur_sigma_limit:
+  value: 0.1
+data.img_processing.aug1.aug_gaussian_blur_prob:
+  value: 0.5
+data.img_processing.aug1.aug_gauss_noise_var_limit:
+  value: 0.00001
+data.img_processing.aug1.aug_gauss_noise_prob:
+  value: 0.5
+data.img_processing.aug1.aug_shift_scale_rotate_shift_lim:
+  value: 0.05
+data.img_processing.aug1.aug_shift_scale_rotate_scale_lim:
+  value: 0.1
+data.img_processing.aug1.aug_shift_scale_rotate_rot_lim:
+  value: 10
+data.img_processing.aug1.aug_shift_scale_rotate_prob:
+  value: 0.5
+data.img_processing.aug1.aug_rand_brightness_contrast_prob:
+  value: 0.5
