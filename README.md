@@ -1,5 +1,5 @@
 # Annotation Efforts in Image Segmentation can be Reduced by Neural Network Bootstrapping
-This repository is the implementation of the BMT2022 Contribution [Annotation Efforts in Image Segmentation can be Reduced by Neural Network Bootstrapping](XXXX URL TO FOLLOW).
+This repository is the implementation of the BMT2022 Contribution [Annotation Efforts in Image Segmentation can be Reduced by Neural Network Bootstrapping](https://www.degruyter.com/document/doi/10.1515/cdbme-2022-1084/html).
 
 ## Project Structure
 Overview of this repository:
